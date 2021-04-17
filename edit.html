@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="edit.css">
+    <title>Edit student</title>
+  </head>
+  <body>
+    <div class="container-fluid"> <!-- global container -->
+        <div class="row justify-content-center"> <!-- image de profile -->
+            <img  id="progileimage" class='img-fluid progileimage'src="" alt="Girl in a jacket" style="width:10%">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-lg-9 col-xl-7 surreding">
+                <div class="row justify-content-center">
+                    <div  class="col-11 col-sm-10 col-lg-9 col-xl-7 welcome">
+                        Welcome <span id="strong"></span> <!-- span is containing the user name using JS-->
+                    </div>
+                </div>
+                <div class="row justify-content-start">
+                    <div id="original" class="show" >
+                        <span class="welcome " > About Me :</span>
+                        <div class="informationtag">Name : </div>  <strong class="userinfos" id="Name"></strong>
+                        <div class="informationtag">Last Name : </div><strong class="userinfos" id="lname"></strong>
+                        <div class="informationtag">Full adresse  : </div><strong class="userinfos" id="adress"></strong>
+                        <div class="informationtag">Email  : </div><strong class="userinfos" id="email"></strong>
+                        <div class="informationtag">University : </div><strong class="userinfos" id="univer"></strong>
+                        <div class="informationtag"> Age : </div><strong class="userinfos" id="age"></strong>
+                    </div>
+                    <div id="amodifie" class="none" >
+                        <div class="informationtag">Name : </div>  <input type="text" name="name " value="" id="name2">
+                        <div class="informationtag">Last Name : </div> <input type="text " name="lastname" value="" id="lastname2">
+                        <div class="informationtag">Full adresse  : </div><input type="text" value="" id="adress2">
+                        <div class="informationtag">Email  : </div><input type="text" value="" id="email2" disabled>
+                        <div class="informationtag"> Age : </div> <input type="text" value="" id="Age2">
+                        <div class="informationtag">University : </div> <input type="text" value="" id="univer2" disabled>
+                        <div > <button class="btn btn-primary full" onclick="save()"> Save modification </button></div> 
+                    </div>
+                    
+                </div>
+                <div class="row justify-content-between btnnn">
+                    <button onclick="ok()" id="mod" type="button" class="btn btn-info modif">Modifié le profile </button>
+                    <button onclick="deco()"  id="mod" type="button" class="btn btn-dark deco">Déconnexion </button>
+                </div>
+            </div>
+       
+        </div>
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="edit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

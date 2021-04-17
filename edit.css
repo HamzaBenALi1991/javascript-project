@@ -1,0 +1,87 @@
+/*all about the background image in the body*/
+body{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-image: url("pics/wall.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-attachment: fixed;
+    
+}
+/*border and background  for the white platform */
+.surreding{
+    
+    min-height: 73vh !important;
+    background-color:  rgba(235, 235, 235, 0.726);
+    border-radius: 20px;
+    margin-top: -2%;
+    width: 80vh;
+    margin-bottom: 5px;
+}
+/* border for image de profile */
+.progileimage{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 150px !important;
+    height: 150px !important;
+}
+/*styme for welcome user */ 
+.welcome{ 
+    margin-top: 25px;
+    display: block;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    font-stretch: expanded;
+    padding-top: 15px;
+    background: -webkit-linear-gradient(rgb(75, 90, 226), rgba(212, 139, 55, 0.76),rgba(21,56,8,0.6));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.144);
+    
+}
+/*styme for information Tag  */ 
+.userinfos{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    color: rgb(3, 15, 15) !important;
+    font-weight: 400;
+}
+.informationtag{
+    font-size: 28px;
+    text-align: center;
+    font-stretch: expanded;
+    padding-top: 15px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.144);
+    color: rgb(116, 109, 109);
+    min-width: 50%;
+    display: inline-block;
+    text-align: left;
+    margin-left: 5px;
+}
+/* button modifie le pro */ 
+.modif{
+    align-items: flex-end;
+    margin-right: 0;
+}
+/* button modifie on click display to give */ 
+.none{
+    display: none;
+}
+.modif{
+    position: absolute;
+    bottom: 0;
+}
+.deco{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.full{
+    min-width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+}

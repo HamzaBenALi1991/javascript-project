@@ -1,0 +1,56 @@
+/*all about the background image in the body*/
+body{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-image: url("pics/wall.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-attachment: fixed;
+    
+}
+.surreding{
+    z-index: 1000;
+    min-height: 60vh;
+    background-color:  rgba(235, 235, 235, 0.726);
+    border-radius: 20px;
+    margin-top: 8%;
+    width: 80vh;
+    
+}
+.welcome{ 
+    font-size: 2vw;
+    text-align: center;
+    font-weight: bold;
+    font-stretch: expanded;
+    padding-top: 15px;
+    background: -webkit-linear-gradient(rgb(75, 90, 226), rgba(212, 139, 55, 0.76),rgba(21,56,8,0.6));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.144);
+}
+
+.loginto{
+    margin-top: 7px;
+}
+.infos{
+    margin-top: 10px;
+}
+.btn-success{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.sign{
+    text-align: center;
+}
+img{
+    background-color: inherit;
+    background-image: inherit;
+}
+/* message error colo/*/
+.wrong{
+    color: red;
+}

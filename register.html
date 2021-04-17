@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="register.css">
+        <title>Registration Page</title>
+    </head>
+    <body >
+       <div class="container-fluid">
+           <div class="row justify-content-center">
+                <div class="col-11 col-sm-10 col-lg-9 col-xl-7 surreding"> <!-- white space surrending the login -->
+                    <div class="welcome"> WELCOME </div>
+                    <hr>
+                    <div class="row justify-content-center"><!-- 3 option to choose from , PS ; no form is it an issue ?-->
+                            <div class="col-11 col-sm-7 col-lg-2   radiobtn">
+                                <input type="radio" id="Etudiant"
+                                             name="drone" value="Etudiant" checked onclick="checkoption(this.value)" />
+                                <label for="Etudiant">Etudiant</label>
+                            </div>
+                        
+                            <div class="col-11 col-sm-7 col-lg-2 radiobtn">
+                                <input type="radio" id="University"
+                                             name="drone" value="University" onclick="checkoption(this.value)"  />
+                                <label for="University">University</label>
+                            </div>
+                        
+                            <div class="col-11 col-sm-7 col-lg-2  radiobtn">
+                                <input type="radio" id="Admin"
+                                             name="drone" value="Admin" onclick="checkoption(this.value)" />
+                                <label for="Admin">Super Admin</label>
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="row justify-content-center " id="student"> <!-- registration for student -->
+                        <div class="col-11 col-sm-10 col-lg-9 col-xl-9" >
+                            
+                            <label class="label1" for="fname">First Name :</label> <!--first name input -->
+                            <input class=" infos" maxlength="20" id="fname" placeholder="Your First Name" >
+                            <div class="wrong" id="invalidname"></div>
+                            <label class="label1" for="lname">Last  Name :</label><!--last name input -->
+                            <input class=" infos" maxlength="20" id="lname" placeholder="Your Last Name" >
+                            <div class="wrong"  id="invalidlastname"></div>
+                            <label class="label1" for="Adress"> Adress :</label><!--adresse name input -->
+                            <input class=" infos" maxlength="50" id="SAdress" placeholder="Adress" >
+                            <div class="wrong"  id="falseadress"></div>
+                            <label class="label1" for="Semail" >Email : </label>
+                            <input type="email" class="infos" id="Semail" placeholder="Email Adress" ><!-- email for student-->
+                            <div class="wrong"  id="invalidemail"></div>
+                            <label for="SDateofbirth" class="label1" >Date of birth :</label><!-- age of student -->
+                            <input id="SDateofbirth" type="date"  class="infos" >
+                            <div class="wrong"  id="ageinvalid"></div>
+                            <label class="label1" for="Passworduser"> password :</label><!-- password and confirmation -->
+                            <input class="infos" type="password" id='Passworduser' placeholder="Your Password">
+                            <div class="wrong"  id="invalidpass"></div>
+                            <label class="label1" for="Passworduser2"> Password confirmation:</label>
+                            <input class="infos" type="password" id='Passworduser2' placeholder="Confirme your Password">
+                            <div class="wrong"  id="invalidpass2"></div>
+                            <label for="Suniversity" class="label1"> University :</label> <!-- select university-->
+                                    <input onfocus="this.value=''"  placeholder="University" onchange="this.blur();" list="screens.screenid-datalist" 
+                                                autocomplete="off" class="infos"   type="text" id="screens.screenid" >
+                                    <datalist id="screens.screenid-datalist">  </datalist>
+                            <div class="wrong"  id="univempty"></div>
+                         
+                            <label  for="simage" class="label1"> Image (Optional): </label> <!-- image-->
+                            <input id="simage"  class="infos" type="file" >
+                            <button class="btn btn-success" id="Ssubmit" onclick="scheck()"  >Submit registration</button>
+                            
+                     
+                        </div>
+                       
+                    </div>
+                    <div class="row justify-content-center s" id="uni"><!-- registration for institution -->
+                        <div class="col-11 col-sm-10 col-lg-9 col-xl-9 ">
+                            
+                            <label class="label1" for="institution">Name of the Institution</label><!--l name of the instituion input and mabe-->
+                            <input id="instituion" required class="infos" type="text" minlength="2"
+                                                maxlength="50" name="institution" placeholder="Name of the Institution"> 
+                            <div class="wrong" id="wrongname"></div>
+                            <label class="label1" for="location">Location </label><!--location  input and label-->
+                            <input id="location" required class="infos" type="text"
+                                                maxlength="50" name="location" placeholder="Location">  
+                            <div class="wrong" id="wronglocation"></div>
+                            <label class="label1" for="Sadress">Specific Adress </label><!--location  input and label-->
+                            <input id="Sadress" class="infos"
+                                                maxlength="50" name="Sadress" placeholder="Your specific Adress">  
+                            <div class="wrong" id="wrongadress"></div>                    
+                            <label class="label1" for="Password"> Password</label> <!-- password and its confirmation -->
+                            <input id="Upassword" name="password " type="password" required placeholder="Password" 
+                                                minlength="8" type="text" class="infos">
+                            <div id="wrongpassword"></div>
+                            <label class="label1" for="Password"> Confirm your Password</label>
+                            <input id="Upassword2" name="password2" type="password" required placeholder="Repeat your Password"
+                                            minlength="6" type="text" class="infos">
+                            <div class="wrong" id="wrongpassword2"></div>
+                            <label class="label1" for="uemail"> E-mail Adress</label><!-- email adress-->
+                            <input class="infos" id="uemail" name="uemail" required  placeholder="Your E-mail Adress" >
+                            <div class="wrong" id='wrongemail'></div>
+                            <label class="label1"> Image (Optional) </label> <!-- image-->
+                            <input id="Uimage"  class="infos" type="file" >
+                            <button  class="btn btn-success" id="Usubmit" onclick="ucheck()"  >Submit registration</button><!-- submit button-->
+                              
+                        </div>                                          
+                    </div>
+                    <div class="row justify-content-center s" id="ss"><!-- registration for admin -->
+                        <div class="col-11 col-sm-10 col-lg-9 col-xl-9">
+                            <label class="label1" for="adminName">Name </label>
+                            <input class="infos" type="text" id="adminName" placeholder="First Name" >
+                            <div class="wrong" id="wrongadminame"></div>
+                            <label class="label1" for="adminlastName">Last  Name </label>
+                            <input class="infos" type="text" id="adminlastName" placeholder="Last Name">
+                            <div class="wrong" id="adminlastnamewrong"></div>
+                            <label class="label1" for="passwordadmin">Password KEY : </label>
+                            <input class="infos" type="password" id="passwordadmin" placeholder="Admin Super Key">
+                            <div class="wrong" id="passwordadminwrong"></div>
+                            <label class="label1" for="adminownkey"> Your Own Password: </label>
+                            <input class="infos" type="password" id="adminownkey" placeholder="Your Password">
+                            <div class="wrong" id="adminwrongpassword"></div>
+                            <label class="label1" for="adminemail" > Email :</label>
+                            <input type="email" class="infos" id="adminemail" placeholder="Email ">
+                            <div  class="wrong" id="emailadminwrong"></div>
+                           
+                            <input type="button" class="btn btn-success" value="Submit " id="submitss" onclick="checkadmin()" >
+                        </div>    
+                        
+                        
+                    </div>
+                </div>
+           </div>
+       </div>
+       
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!--ficher JS-->
+        <script src="register.js"> </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

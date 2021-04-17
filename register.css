@@ -1,0 +1,160 @@
+/*all about the background image in the body*/
+body{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-image: url("pics/wall.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-attachment: fixed;
+    
+}
+/*border and background  for the white platform */
+.surreding{
+    z-index: 1000;
+    min-height: fit-content !important;
+    background-color:  rgba(235, 235, 235, 0.726);
+    border-radius: 20px;
+    margin-top: 8%;
+    width: 80vh;
+    margin-bottom: 5px;
+}
+/* the welcome word on top color */
+.welcome{ 
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-stretch: expanded;
+    padding-top: 15px;
+    background: -webkit-linear-gradient(rgb(75, 90, 226), rgba(212, 139, 55, 0.76),rgba(21,56,8,0.6));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.144);
+}
+/* 3 choix de etudiant /university /superadmin*/
+.radiobtn {
+    position: relative;
+    display: inline-block;
+   min-width: 30%;
+}
+.radiobtn label {
+    display: block;
+    background: #17b39932;
+    color: rgb(7, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px solid #fdd591;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.radiobtn label:after, .radiobtn label:before {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: #fdcc776c;
+}
+.radiobtn label:before {
+    background: transparent;
+    transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: center;
+    width: 0;
+    height: 0;
+}
+.radiobtn input[type="radio"] {
+    display: none;
+    position: absolute;
+    width: 100%;
+    appearance: none;
+}
+.radiobtn input[type="radio"]:checked + label {
+    background: #fdcc777c;
+    animation-name: blink;
+    animation-duration: 1s;
+    border-color: #fcb02c46;
+}
+.radiobtn input[type="radio"]:checked + label:after {
+    background: #111110;
+}
+.radiobtn input[type="radio"]:checked + label:before {
+    width: 20px;
+    height: 20px;
+}
+@keyframes blink {
+    0% {
+        background-color: #fdcb77;
+   }
+    10% {
+        background-color: #fdcb77;
+   }
+    11% {
+        background-color: #fdd591;
+   }
+    29% {
+        background-color: #fdd591;
+   }
+    30% {
+        background-color: #fdcb77;
+   }
+    50% {
+        background-color: #fdd591;
+   }
+    45% {
+        background-color: #fdcb77;
+   }
+    50% {
+        background-color: #fdd591;
+   }
+    100% {
+        background-color: #fdcb77;
+   }
+}
+/* syle for label and input on the registration page */
+.label1{
+  min-width: 250px;
+}
+.infos{
+    background-color:inherit;
+    display: inline-block;
+    width: 30vh;
+    border: 2px solid #0a0a0a ;
+    border-radius: 6px;
+    margin-top: 5px;
+    transition: border  150ms linear;
+}
+.infos:focus-within{
+    border-color:#fdcb77  ;
+    outline: none !important;
+}
+
+/* button submit */
+.sub{
+    width: 80%;
+    margin:10%
+}
+/* class for student registration and University registration  to hide contents  */
+.s{
+    display: none;
+}
+/* button submit student */
+.btn-success{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+   
+}
+/* message error colo/*/
+.wrong{
+    color: red;
+}
+/* erase input university in case no university have been set */
+.erase{
+    display: none;
+}
